@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Flex:opsz,wght@8..144,100..1000&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&family=Roboto+Slab:wght@100..900&display=swap');
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    color: white;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 48px;
+    background-color: #d9d9d9;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+    z-index: 10;
+    font-size: 14px;
+}
+
+.logo {
+    font-family: "Roboto Serif", serif;
+    font-weight: regular;
+    color: #111;
+    font-size: 24px;
+    letter-spacing: 0.1em;
+}
+
+.logo span {
+    margin-right: 6px;
+}
+
+.nav {
+    display: flex;
+    gap: 20px;
+}
+
+.nav a {
+    text-decoration: none;
+    color: #111;
+    font-size: 14px;
+}
+.nav a:hover {
+    text-decoration: underline;
+    text-underline-offset: 0.15em;
+}
+
+.hero {
+    height: 100vh;
+    background-image: linear-gradient(to top, rgba(0 ,0, 0, 0.6), rgba(0, 0, 0, 0.1)), 
+    url(/IMG_20251122_125136_785.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: flex-end;
+    padding: 70px 50px 30px;
+}
+
+.hero_content {
+    max-width: 600px;
+}
+
+.hero_title {
+    font-size: 40px;
+    line-height: 1.2;
+    margin-bottom: 18px;
+    font-weight: 600;
+}
+
+.hero_subtitle {
+    font-size: 14px;
+    color: #f1f1f1;
+}
+
+.products {
+    background: #262626;
+    padding: 60px 60px 80px;
+}
+
+.products_inner {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.products_title {
+    font-family: "Roboto Flex";
+    font-size: 2em;
+    color: #f5f5f5;
+    letter-spacing: 0.08em;
+    padding-bottom: 30px;
+}
+
+.coffee {
+    font-family: "Roboto Serif";
+    font-weight: 800;
+} 
+
+.products_grid {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.product_card {
+    width: 280px;
+    background: #f3f3f3;
+    color: #111;
+    box-shadow: 0 6px 0 rgba(0, 0, 0, 0.4);
+}
+
+.product_image img {
+    display: block;
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+    transform: scale(0.9);
+}
+
+.product_body {
+    padding: 18px 20px 16px;
+    font-size: 13px;
+    line-height: 1.4;
+    display: flex;
+    flex-direction: column;
+    height: calc(100% - 190px);
+
+
+}
+
+.product_name {
+    font-family: "Roboto Serif", serif;
+    font-size: 22px;
+    letter-spacing: 0.18em;
+    margin-bottom: 10px;
+}
+
+.product_row {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+    margin-top: 8px;
+}
+
+.product_col_title {
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.product_list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.product_list li::before {
+    content: "★ ";
+    font-size: 11px;
+}
+
+.product_text {
+    margin-top: 6px;
+}
+
+.product_actions {
+    display: flex;
+    margin-top: auto;
+    gap: 8px;
+    
+}
+
+.product_body > *:not(.product_actions) {
+    margin-bottom: 12px;
+}
+
+.btn {
+    flex: 1;
+    padding: 10px 0;
+    border: none;
+    font-size: 12px;
+    text-transform: none;
+    cursor: pointer;
+    color: #fff;
+}
+
+.btn_gold {
+    background: #c3870b;
+}
+
+.btn_burgundy {
+    background: #4a1815;
+}
+
+@media (max-width: 768px) {
+    .header {
+        padding: 0 16px;
+    }
+}
