@@ -56,7 +56,7 @@ body {
 .hero {
     height: 100vh;
     background-image: linear-gradient(to top, rgba(0 ,0, 0, 0.6), rgba(0, 0, 0, 0.1)), 
-    url(./coffee1.jpg);
+    url(coffee1.jpg);
     background-size: cover;
     background-position: center;
     display: flex;
