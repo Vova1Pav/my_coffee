@@ -1,0 +1,37 @@
+
+const { createRoot } = ReactDOM;
+
+function Snowfall() {
+  const count = 120;
+
+  const flakes = Array.from({ length: count }, () => ({
+    left: Math.random() * 100 + "%",
+    duration: Math.random() * 15 + 10 + "s",
+    delay: Math.random() * 8 + "s",
+    size: Math.random() * 14 + 10 + "px",
+    opacity: Math.random() * 0.6 + 0.4,
+    swing: Math.random() * 160 - 80 + "px"
+  }));
+
+  return React.createElement(
+    "div",
+    { className: "snow-container" },
+    flakes.map((f, i) =>
+      React.createElement("div", {
+        key: i,
+        className: "snowflake",
+        style: {
+          left: f.left,
+          animationDuration: f.duration,
+          animationDelay: f.delay,
+          fontSize: f.size,
+          opacity: f.opacity,
+          "--swing": f.swing
+        }
+      }, "❅")
+    )
+  );
+}
+
+
+createRoot(document.getElementById("snow")).render(React.createElement(Snowfall));
